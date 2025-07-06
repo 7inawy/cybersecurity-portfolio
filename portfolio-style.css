@@ -686,6 +686,172 @@ body::before {
     line-height: 1.6;
 }
 
+/* Projects & Experience Section */
+.projects {
+    padding: 30px 20px;
+    margin-top: 30px;
+}
+
+.projects .container {
+    background: rgba(26, 26, 26, 0.6);
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+    border: 1px solid rgba(0, 255, 136, 0.15);
+    padding: 2.5rem 2rem;
+    box-shadow: 
+        0 20px 40px rgba(0, 0, 0, 0.4),
+        inset 0 1px 0 rgba(0, 255, 136, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.projects .container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url("data:image/svg+xml,%3Csvg width='60' height='60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0h60v60H0z' fill='none'/%3E%3Cpath d='M30 0v60M0 30h60' stroke='%2300ff88' stroke-width='0.3' stroke-opacity='0.1'/%3E%3C/svg%3E");
+    pointer-events: none;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+    position: relative;
+    z-index: 1;
+}
+
+.project-card {
+    background: rgba(0, 255, 136, 0.05);
+    border: 1px solid rgba(0, 255, 136, 0.2);
+    border-radius: 15px;
+    padding: 2rem;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.project-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(0, 255, 136, 0.03) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    border-color: rgba(0, 255, 136, 0.4);
+    box-shadow: 0 20px 40px rgba(0, 255, 136, 0.2);
+}
+
+.project-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: rgba(0, 255, 136, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    border: 2px solid rgba(0, 255, 136, 0.3);
+}
+
+.project-icon i {
+    font-size: 1.8rem;
+    color: #00ff88;
+}
+
+.project-card h3 {
+    color: #00ff88;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    text-shadow: 0 0 10px rgba(0, 255, 136, 0.3);
+}
+
+.project-card p {
+    color: #c0c0c0;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.project-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.project-tech span {
+    background: rgba(0, 255, 136, 0.1);
+    color: #00ff88;
+    padding: 0.3rem 0.8rem;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    border: 1px solid rgba(0, 255, 136, 0.2);
+}
+
+.certifications {
+    margin-top: 3rem;
+    position: relative;
+    z-index: 1;
+}
+
+.certifications h3 {
+    color: #00ff88;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    text-shadow: 0 0 20px rgba(0, 255, 136, 0.5);
+}
+
+.cert-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.cert-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background: rgba(0, 255, 136, 0.05);
+    padding: 1.5rem;
+    border-radius: 10px;
+    border: 1px solid rgba(0, 255, 136, 0.2);
+    transition: all 0.3s ease;
+}
+
+.cert-item:hover {
+    border-color: rgba(0, 255, 136, 0.4);
+    transform: translateX(10px);
+}
+
+.cert-item i {
+    font-size: 2rem;
+    color: #00ff88;
+    min-width: 40px;
+}
+
+.cert-item h4 {
+    color: #00ff88;
+    font-size: 1.2rem;
+    margin-bottom: 0.3rem;
+}
+
+.cert-item p {
+    color: #c0c0c0;
+    font-size: 0.9rem;
+    margin: 0;
+}
+
 /* Why Choose Me Section */
 .why-choose {
     padding: 30px 20px;
@@ -1288,6 +1454,43 @@ body::before {
         margin-top: 1rem;
     }
     
+    /* Projects section mobile */
+    .projects .container {
+        margin: 10px;
+        padding: 1.5rem 1rem;
+    }
+    
+    .projects-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .project-card {
+        padding: 1.5rem;
+    }
+    
+    .project-icon {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .project-icon i {
+        font-size: 1.5rem;
+    }
+    
+    .cert-list {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .cert-item {
+        padding: 1rem;
+    }
+    
+    .certifications h3 {
+        font-size: 1.8rem;
+    }
+    
     .contact-header h2 {
         font-size: 2rem;
         margin-bottom: 1rem;
@@ -1355,6 +1558,7 @@ body::before {
     .hero .container,
     .about .container,
     .skills .container,
+    .projects .container,
     .why-choose .container,
     .contact .container {
         margin: 10px;
@@ -1440,6 +1644,49 @@ body::before {
     
     .skill-card p {
         font-size: 0.85rem;
+    }
+    
+    /* Projects section small mobile */
+    .project-card {
+        padding: 1.2rem;
+    }
+    
+    .project-card h3 {
+        font-size: 1.1rem;
+    }
+    
+    .project-card p {
+        font-size: 0.85rem;
+    }
+    
+    .project-icon {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .project-icon i {
+        font-size: 1.2rem;
+    }
+    
+    .project-tech span {
+        font-size: 0.7rem;
+        padding: 0.2rem 0.6rem;
+    }
+    
+    .cert-item {
+        padding: 0.8rem;
+    }
+    
+    .cert-item h4 {
+        font-size: 1rem;
+    }
+    
+    .cert-item p {
+        font-size: 0.8rem;
+    }
+    
+    .certifications h3 {
+        font-size: 1.5rem;
     }
     
     .why-choose-text h2 {
