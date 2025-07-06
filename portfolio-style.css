@@ -359,13 +359,9 @@ body::before {
 
 .hero-content {
     display: grid;
-    grid-template-columns: 1.2fr 0.8fr;
-    gap: 6rem;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
     align-items: center;
-}
-
-.hero-text {
-    padding-left: 2rem;
 }
 
 .hero-text h1 {
@@ -449,9 +445,8 @@ body::before {
 
 .hero-image {
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
-    padding-right: 2rem;
 }
 
 .profile-circle {
@@ -1047,92 +1042,29 @@ body::before {
     line-height: 1.6;
 }
 
-.contact-form-container {
-    display: flex;
-    justify-content: center;
-}
-
-.modern-contact-form {
-    width: 100%;
-    max-width: 800px;
-    background: rgba(26, 26, 26, 0.8);
-    padding: 3rem;
-    border-radius: 15px;
-    border: 1px solid rgba(0, 255, 136, 0.2);
-    backdrop-filter: blur(10px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-}
-
-.form-row {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1.5rem;
-    margin-bottom: 1.5rem;
-}
-
-.form-group {
-    margin-bottom: 1.5rem;
-}
-
-.form-group label {
-    display: block;
-    color: #00ff88;
-    font-size: 1rem;
-    font-weight: 500;
-    margin-bottom: 0.5rem;
-    text-shadow: 0 0 10px rgba(0, 255, 136, 0.3);
-}
-
-.form-group input,
-.form-group textarea {
-    width: 100%;
-    padding: 1rem;
-    border: 2px solid rgba(0, 255, 136, 0.3);
-    border-radius: 8px;
-    font-size: 1rem;
-    transition: all 0.3s ease;
-    font-family: inherit;
-    background: rgba(10, 10, 10, 0.9);
-    color: #e0e0e0;
-    box-sizing: border-box;
-}
-
-.form-group input::placeholder,
-.form-group textarea::placeholder {
-    color: #666;
-}
-
-.form-group input:focus,
-.form-group textarea:focus {
-    outline: none;
-    border-color: #6366f1;
-    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
-    background: rgba(10, 10, 10, 1);
-}
-
-/* Contact Buttons Styles */
-.contact-buttons {
+/* Contact Methods */
+.contact-methods {
     display: flex;
     justify-content: center;
     gap: 2rem;
+    margin-top: 3rem;
     flex-wrap: wrap;
-    margin: 3rem 0;
 }
 
 .contact-btn {
     display: flex;
     align-items: center;
     gap: 0.8rem;
-    padding: 1.2rem 2rem;
-    background: rgba(0, 255, 136, 0.1);
-    border: 2px solid rgba(0, 255, 136, 0.3);
+    padding: 1rem 2rem;
+    background: rgba(26, 26, 26, 0.8);
+    backdrop-filter: blur(10px);
+    border: 2px solid;
     border-radius: 50px;
-    color: #ffffff;
     text-decoration: none;
     font-weight: 600;
-    font-size: 1.1rem;
+    font-size: 1rem;
     transition: all 0.3s ease;
-    min-width: 180px;
+    min-width: 160px;
     justify-content: center;
     position: relative;
     overflow: hidden;
@@ -1145,7 +1077,7 @@ body::before {
     left: -100%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(0, 255, 136, 0.3), transparent);
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
     transition: left 0.5s ease;
 }
 
@@ -1153,110 +1085,48 @@ body::before {
     left: 100%;
 }
 
-.contact-btn:hover {
-    transform: translateY(-3px);
+.email-btn {
     border-color: #00ff88;
-    box-shadow: 0 8px 25px rgba(0, 255, 136, 0.4);
-    background: rgba(0, 255, 136, 0.2);
-}
-
-.contact-btn i {
-    font-size: 1.3rem;
     color: #00ff88;
-    transition: all 0.3s ease;
+    box-shadow: 0 0 20px rgba(0, 255, 136, 0.3);
 }
 
-.contact-btn:hover i {
-    transform: scale(1.1);
-    text-shadow: 0 0 10px rgba(0, 255, 136, 0.8);
-}
-
-.contact-btn span {
-    color: #ffffff;
-    transition: all 0.3s ease;
-}
-
-.contact-btn:hover span {
-    color: #00ff88;
-    text-shadow: 0 0 8px rgba(0, 255, 136, 0.6);
-}
-
-/* Specific button colors */
 .email-btn:hover {
-    border-color: #00ff88;
-    box-shadow: 0 8px 25px rgba(0, 255, 136, 0.4);
+    background: rgba(0, 255, 136, 0.1);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 255, 136, 0.4);
+}
+
+.whatsapp-btn {
+    border-color: #25D366;
+    color: #25D366;
+    box-shadow: 0 0 20px rgba(37, 211, 102, 0.3);
 }
 
 .whatsapp-btn:hover {
-    border-color: #25D366;
-    box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
+    background: rgba(37, 211, 102, 0.1);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(37, 211, 102, 0.4);
 }
 
-.whatsapp-btn:hover i,
-.whatsapp-btn:hover span {
-    color: #25D366;
-    text-shadow: 0 0 8px rgba(37, 211, 102, 0.6);
-}
-
-.phone-btn:hover {
+.call-btn {
     border-color: #007bff;
-    box-shadow: 0 8px 25px rgba(0, 123, 255, 0.4);
-}
-
-.phone-btn:hover i,
-.phone-btn:hover span {
     color: #007bff;
-    text-shadow: 0 0 8px rgba(0, 123, 255, 0.6);
+    box-shadow: 0 0 20px rgba(0, 123, 255, 0.3);
 }
 
-/* Success Notification Styles */
-.success-notification {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: rgba(26, 26, 26, 0.95);
-    backdrop-filter: blur(15px);
-    border: 2px solid #00ff88;
-    border-radius: 15px;
-    padding: 2rem;
-    text-align: center;
-    z-index: 1000;
-    box-shadow: 
-        0 20px 40px rgba(0, 0, 0, 0.7),
-        0 0 30px rgba(0, 255, 136, 0.3);
-    animation: successSlideIn 0.5s ease-out;
+.call-btn:hover {
+    background: rgba(0, 123, 255, 0.1);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 123, 255, 0.4);
 }
 
-.success-content i {
-    font-size: 3rem;
-    color: #00ff88;
-    margin-bottom: 1rem;
-    text-shadow: 0 0 20px rgba(0, 255, 136, 0.5);
+.contact-btn i {
+    font-size: 1.2rem;
 }
 
-.success-content h3 {
-    color: #00ff88;
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
-    text-shadow: 0 0 10px rgba(0, 255, 136, 0.3);
-}
-
-.success-content p {
-    color: #c0c0c0;
-    font-size: 1rem;
-    margin: 0;
-}
-
-@keyframes successSlideIn {
-    from {
-        opacity: 0;
-        transform: translate(-50%, -60%);
-    }
-    to {
-        opacity: 1;
-        transform: translate(-50%, -50%);
-    }
+.contact-btn span {
+    font-family: 'Poppins', sans-serif;
 }
 
 /* Footer */
@@ -1339,16 +1209,6 @@ body::before {
 
 /* Tablet (768px to 991px) */
 @media (min-width: 768px) and (max-width: 991px) {
-    /* Contact buttons tablet */
-    .contact-buttons {
-        gap: 1.5rem;
-        margin: 2.5rem 0;
-    }
-    
-    .contact-btn {
-        min-width: 200px;
-        padding: 1.1rem 1.8rem;
-    }
     .container {
         max-width: 720px;
         margin: 0 auto;
@@ -1361,17 +1221,9 @@ body::before {
     }
     
     .hero-content {
-        grid-template-columns: 1.1fr 0.9fr;
-        gap: 4rem;
-    }
-    
-    .hero-text {
-        padding-left: 1rem;
-    }
-    
-    .hero-image {
-        justify-content: flex-end;
-        padding-right: 1rem;
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        text-align: center;
     }
     
     .hero-text h1 {
@@ -1398,13 +1250,14 @@ body::before {
         margin-bottom: 1.5rem;
     }
     
-    .form-row {
-        grid-template-columns: 1fr;
+    .contact-methods {
         gap: 1.5rem;
     }
     
-    .modern-contact-form {
-        padding: 2.5rem;
+    .contact-btn {
+        min-width: 140px;
+        padding: 0.9rem 1.8rem;
+        font-size: 0.95rem;
     }
 }
 
@@ -1668,36 +1521,17 @@ body::before {
         margin-bottom: 2rem;
     }
     
-    /* Contact buttons mobile */
-    .contact-buttons {
+    .contact-methods {
+        gap: 1rem;
         flex-direction: column;
         align-items: center;
-        gap: 1.5rem;
-        margin: 2rem 0;
     }
     
     .contact-btn {
-        min-width: 250px;
+        min-width: 200px;
+        max-width: 280px;
+        width: 100%;
         padding: 1rem 1.5rem;
-        font-size: 1rem;
-    }
-    
-    .contact-btn i {
-        font-size: 1.2rem;
-    }
-    
-    .form-row {
-        grid-template-columns: 1fr;
-        gap: 1rem;
-    }
-    
-    .form-group label {
-        font-size: 0.9rem;
-    }
-    
-    .form-group input,
-    .form-group textarea {
-        padding: 0.8rem;
         font-size: 1rem;
     }
     
@@ -1897,14 +1731,13 @@ body::before {
         font-size: 1.6rem;
     }
     
-    .modern-contact-form {
-        padding: 1.2rem;
-        margin: 0 5px;
+    .contact-methods {
+        gap: 0.8rem;
     }
     
-    .form-group input,
-    .form-group textarea {
-        padding: 0.7rem;
+    .contact-btn {
+        min-width: 180px;
+        padding: 0.9rem 1.2rem;
         font-size: 0.9rem;
     }
     
@@ -1922,16 +1755,7 @@ body::before {
     }
     
     .hero-content {
-        grid-template-columns: 1.3fr 0.7fr;
-        gap: 8rem;
-    }
-    
-    .hero-text {
-        padding-left: 3rem;
-    }
-    
-    .hero-image {
-        padding-right: 3rem;
+        gap: 4rem;
     }
     
     .skills-grid {
