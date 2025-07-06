@@ -1157,42 +1157,7 @@ body::before {
     min-width: 200px;
 }
 
-.manual-form-note {
-    background: rgba(0, 255, 136, 0.03);
-    border: 1px solid rgba(0, 255, 136, 0.1);
-    border-radius: 10px;
-    padding: 2rem;
-    margin-top: 2rem;
-}
 
-.manual-form-note p {
-    color: #c0c0c0;
-    margin-bottom: 1.5rem;
-    text-align: center;
-}
-
-.manual-form-note i {
-    color: #00ff88;
-    margin-right: 0.5rem;
-}
-
-.email-template {
-    background: rgba(0, 255, 136, 0.05);
-    border: 1px solid rgba(0, 255, 136, 0.2);
-    border-radius: 8px;
-    padding: 1.5rem;
-    font-family: 'Courier New', monospace;
-    color: #c0c0c0;
-    line-height: 1.6;
-}
-
-.email-template strong {
-    color: #00ff88;
-}
-
-.email-template em {
-    color: #e0e0e0;
-}
 
 /* Success Notification Styles */
 .success-notification {
@@ -1657,15 +1622,6 @@ body::before {
     
     .contact-info .btn {
         min-width: 180px;
-        font-size: 0.9rem;
-    }
-    
-    .manual-form-note {
-        padding: 1.5rem;
-    }
-    
-    .email-template {
-        padding: 1rem;
         font-size: 0.9rem;
     }
     
