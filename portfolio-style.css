@@ -1105,62 +1105,104 @@ body::before {
     background: rgba(10, 10, 10, 1);
 }
 
-/* Contact Methods Styles */
-.contact-methods {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+/* Contact Buttons Styles */
+.contact-buttons {
+    display: flex;
+    justify-content: center;
     gap: 2rem;
-    margin-bottom: 3rem;
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
+    flex-wrap: wrap;
+    margin: 3rem 0;
 }
 
-.contact-method {
-    background: rgba(0, 255, 136, 0.05);
-    border: 1px solid rgba(0, 255, 136, 0.2);
-    border-radius: 15px;
-    padding: 2rem;
-    text-align: center;
+.contact-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    padding: 1.2rem 2rem;
+    background: rgba(0, 255, 136, 0.1);
+    border: 2px solid rgba(0, 255, 136, 0.3);
+    border-radius: 50px;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    min-width: 180px;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.contact-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(0, 255, 136, 0.3), transparent);
+    transition: left 0.5s ease;
+}
+
+.contact-btn:hover::before {
+    left: 100%;
+}
+
+.contact-btn:hover {
+    transform: translateY(-3px);
+    border-color: #00ff88;
+    box-shadow: 0 8px 25px rgba(0, 255, 136, 0.4);
+    background: rgba(0, 255, 136, 0.2);
+}
+
+.contact-btn i {
+    font-size: 1.3rem;
+    color: #00ff88;
     transition: all 0.3s ease;
 }
 
-.contact-method:hover {
-    transform: translateY(-5px);
-    border-color: rgba(0, 255, 136, 0.4);
-    box-shadow: 0 10px 30px rgba(0, 255, 136, 0.2);
+.contact-btn:hover i {
+    transform: scale(1.1);
+    text-shadow: 0 0 10px rgba(0, 255, 136, 0.8);
 }
 
-.contact-icon {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    background: rgba(0, 255, 136, 0.2);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto 1.5rem;
-    border: 2px solid rgba(0, 255, 136, 0.3);
+.contact-btn span {
+    color: #ffffff;
+    transition: all 0.3s ease;
 }
 
-.contact-icon i {
-    font-size: 2.5rem;
+.contact-btn:hover span {
     color: #00ff88;
+    text-shadow: 0 0 8px rgba(0, 255, 136, 0.6);
 }
 
-.contact-info h4 {
-    color: #00ff88;
-    font-size: 1.3rem;
-    margin-bottom: 1rem;
-    text-shadow: 0 0 10px rgba(0, 255, 136, 0.3);
+/* Specific button colors */
+.email-btn:hover {
+    border-color: #00ff88;
+    box-shadow: 0 8px 25px rgba(0, 255, 136, 0.4);
 }
 
-.contact-info .btn {
-    margin-top: 0.5rem;
-    min-width: 200px;
+.whatsapp-btn:hover {
+    border-color: #25D366;
+    box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
 }
 
+.whatsapp-btn:hover i,
+.whatsapp-btn:hover span {
+    color: #25D366;
+    text-shadow: 0 0 8px rgba(37, 211, 102, 0.6);
+}
 
+.phone-btn:hover {
+    border-color: #007bff;
+    box-shadow: 0 8px 25px rgba(0, 123, 255, 0.4);
+}
+
+.phone-btn:hover i,
+.phone-btn:hover span {
+    color: #007bff;
+    text-shadow: 0 0 8px rgba(0, 123, 255, 0.6);
+}
 
 /* Success Notification Styles */
 .success-notification {
@@ -1292,6 +1334,16 @@ body::before {
 
 /* Tablet (768px to 991px) */
 @media (min-width: 768px) and (max-width: 991px) {
+    /* Contact buttons tablet */
+    .contact-buttons {
+        gap: 1.5rem;
+        margin: 2.5rem 0;
+    }
+    
+    .contact-btn {
+        min-width: 200px;
+        padding: 1.1rem 1.8rem;
+    }
     .container {
         max-width: 720px;
         margin: 0 auto;
@@ -1331,34 +1383,6 @@ body::before {
     .expertise-item {
         padding: 1.2rem;
         margin-bottom: 1.5rem;
-    }
-    
-    .contact-methods {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 1.5rem;
-    }
-    
-    .contact-method {
-        padding: 1.5rem;
-    }
-    
-    .contact-icon {
-        width: 60px;
-        height: 60px;
-    }
-    
-    .contact-icon i {
-        font-size: 2rem;
-    }
-    
-    .contact-info h4 {
-        font-size: 1.1rem;
-    }
-    
-    .contact-info .btn {
-        min-width: 150px;
-        font-size: 0.85rem;
-        padding: 0.6rem 1rem;
     }
     
     .form-row {
@@ -1631,29 +1655,22 @@ body::before {
         margin-bottom: 2rem;
     }
     
-    /* Contact methods mobile */
-    .contact-methods {
-        grid-template-columns: 1fr;
+    /* Contact buttons mobile */
+    .contact-buttons {
+        flex-direction: column;
+        align-items: center;
         gap: 1.5rem;
-        margin-bottom: 2rem;
+        margin: 2rem 0;
     }
     
-    .contact-method {
-        padding: 1.5rem;
+    .contact-btn {
+        min-width: 250px;
+        padding: 1rem 1.5rem;
+        font-size: 1rem;
     }
     
-    .contact-icon {
-        width: 60px;
-        height: 60px;
-    }
-    
-    .contact-icon i {
-        font-size: 2rem;
-    }
-    
-    .contact-info .btn {
-        min-width: 180px;
-        font-size: 0.9rem;
+    .contact-btn i {
+        font-size: 1.2rem;
     }
     
     .form-row {
