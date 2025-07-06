@@ -359,9 +359,13 @@ body::before {
 
 .hero-content {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 6rem;
     align-items: center;
+}
+
+.hero-text {
+    padding-left: 2rem;
 }
 
 .hero-text h1 {
@@ -445,8 +449,9 @@ body::before {
 
 .hero-image {
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
+    padding-right: 2rem;
 }
 
 .profile-circle {
@@ -1356,9 +1361,17 @@ body::before {
     }
     
     .hero-content {
-        grid-template-columns: 1fr;
-        gap: 3rem;
-        text-align: center;
+        grid-template-columns: 1.1fr 0.9fr;
+        gap: 4rem;
+    }
+    
+    .hero-text {
+        padding-left: 1rem;
+    }
+    
+    .hero-image {
+        justify-content: flex-end;
+        padding-right: 1rem;
     }
     
     .hero-text h1 {
@@ -1909,7 +1922,16 @@ body::before {
     }
     
     .hero-content {
-        gap: 4rem;
+        grid-template-columns: 1.3fr 0.7fr;
+        gap: 8rem;
+    }
+    
+    .hero-text {
+        padding-left: 3rem;
+    }
+    
+    .hero-image {
+        padding-right: 3rem;
     }
     
     .skills-grid {
