@@ -1105,9 +1105,93 @@ body::before {
     background: rgba(10, 10, 10, 1);
 }
 
-.form-group textarea {
-    resize: vertical;
-    min-height: 120px;
+/* Contact Methods Styles */
+.contact-methods {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.contact-method {
+    background: rgba(0, 255, 136, 0.05);
+    border: 1px solid rgba(0, 255, 136, 0.2);
+    border-radius: 15px;
+    padding: 2rem;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.contact-method:hover {
+    transform: translateY(-5px);
+    border-color: rgba(0, 255, 136, 0.4);
+    box-shadow: 0 10px 30px rgba(0, 255, 136, 0.2);
+}
+
+.contact-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: rgba(0, 255, 136, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    border: 2px solid rgba(0, 255, 136, 0.3);
+}
+
+.contact-icon i {
+    font-size: 2.5rem;
+    color: #00ff88;
+}
+
+.contact-info h4 {
+    color: #00ff88;
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    text-shadow: 0 0 10px rgba(0, 255, 136, 0.3);
+}
+
+.contact-info .btn {
+    margin-top: 0.5rem;
+    min-width: 200px;
+}
+
+.manual-form-note {
+    background: rgba(0, 255, 136, 0.03);
+    border: 1px solid rgba(0, 255, 136, 0.1);
+    border-radius: 10px;
+    padding: 2rem;
+    margin-top: 2rem;
+}
+
+.manual-form-note p {
+    color: #c0c0c0;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.manual-form-note i {
+    color: #00ff88;
+    margin-right: 0.5rem;
+}
+
+.email-template {
+    background: rgba(0, 255, 136, 0.05);
+    border: 1px solid rgba(0, 255, 136, 0.2);
+    border-radius: 8px;
+    padding: 1.5rem;
+    font-family: 'Courier New', monospace;
+    color: #c0c0c0;
+    line-height: 1.6;
+}
+
+.email-template strong {
+    color: #00ff88;
+}
+
+.email-template em {
+    color: #e0e0e0;
 }
 
 /* Success Notification Styles */
@@ -1551,9 +1635,38 @@ body::before {
         margin-bottom: 2rem;
     }
     
-    .modern-contact-form {
+    /* Contact methods mobile */
+    .contact-methods {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        margin-bottom: 2rem;
+    }
+    
+    .contact-method {
         padding: 1.5rem;
-        margin: 0 10px;
+    }
+    
+    .contact-icon {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .contact-icon i {
+        font-size: 2rem;
+    }
+    
+    .contact-info .btn {
+        min-width: 180px;
+        font-size: 0.9rem;
+    }
+    
+    .manual-form-note {
+        padding: 1.5rem;
+    }
+    
+    .email-template {
+        padding: 1rem;
+        font-size: 0.9rem;
     }
     
     .form-row {
