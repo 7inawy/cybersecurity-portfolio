@@ -1108,9 +1108,12 @@ body::before {
 /* Contact Methods Styles */
 .contact-methods {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
     margin-bottom: 3rem;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .contact-method {
@@ -1328,6 +1331,34 @@ body::before {
     .expertise-item {
         padding: 1.2rem;
         margin-bottom: 1.5rem;
+    }
+    
+    .contact-methods {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+    }
+    
+    .contact-method {
+        padding: 1.5rem;
+    }
+    
+    .contact-icon {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .contact-icon i {
+        font-size: 2rem;
+    }
+    
+    .contact-info h4 {
+        font-size: 1.1rem;
+    }
+    
+    .contact-info .btn {
+        min-width: 150px;
+        font-size: 0.85rem;
+        padding: 0.6rem 1rem;
     }
     
     .form-row {
